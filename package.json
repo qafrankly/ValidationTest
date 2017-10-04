@@ -8,17 +8,33 @@
     "layout": "PropTypes.string"
   },
   "defaultProps": {
-    "title": "Test uniqueness",
-    "titleColor": "#000",
-    "backgroundColor": "white",
-    "layout": "hero",
-    "numberOfItems": 6,
-    "textColor": "black",
-    "heroImageBackgroundColor": "#2980b9",
-    "thumbnailAlignment": "left"
-  },
+                           "title": "",
+                           "titleColor": "#000000",
+                           "backgroundColor": "#ffffff",
+                           "layout": "griffin",
+                           "showReadMore": true,
+                           "showPagination": false,
+                           "totalNumberOfItems": 5,
+                           "textColor": "#FFF",
+                           "showTimestamp": true,
+                           "padding": 20,
+                           "showPill": false,
+                           "timestampOptions": {
+                               "showElapsedTime": true,
+                               "displayShortDateTime": true
+                           },
+                           "columnFirstGriffinCount": "2",
+                           "columnSecondGriffinCount": "3",
+                           "columnThirdGriffinCount": "",
+                           "titlePlacement": {
+                               "firstRow": "inner",
+                               "secondRow": "outer",
+                               "thirdRow": "outer",
+                               "endpoints_type": "json"
+                           },
   "propChoices": {
     "layout": [
+      "griffin",
       "hero",
       "list"
     ]
@@ -28,5 +44,6 @@
       "url": "",
       "type": "json"
     }
-  ]
+  ],
+  "FRN_style": {}
 }
