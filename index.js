@@ -293,7 +293,7 @@ const backgroundClasses = classNames(
 
           <ComponentTitle color={titleColor} title={title} />
 
-          <ChevronRight color="#003300" />
+          <ChevronRight color="red" />
 
           {showReadMore && categoryUrl ?
             <div className="CategoryGrid-readMore">
