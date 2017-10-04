@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
 // import ComponentTitle from 'components/shared/ComponentTitle';
-// import ChevronRight from './ChevronRight.js';
+import ChevronRight from 'components/icons/ChevronRight';
 
 // console.log("TESTING CHEVRON RIGHT!!!");
 // console.log(ChevronRight);
@@ -13,7 +13,7 @@ import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
 
 
-class ChevronRight extends Component {
+class ChevronRight1 extends Component {
   static propTypes = {
     color: PropTypes.string
   }
@@ -287,7 +287,7 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST8_1
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST8_2
         {title ?
           <Row>
 
