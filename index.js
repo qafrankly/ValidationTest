@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
 // import ComponentTitle from 'components/shared/ComponentTitle';
-import ChevronRight from './ChevronRight';
+import ChevronRight from './ChevronRight.js';
 
 console.log("TESTING CHEVRON RIGHT!!!");
 console.log(ChevronRight);
