@@ -4,6 +4,10 @@ import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
 // import ComponentTitle from 'components/shared/ComponentTitle';
 import ChevronRight from 'components/icons/ChevronRight';
+
+console.log("TESTING CHEVRON RIGHT!!!");
+console.log(ChevronRight);
+
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
 
