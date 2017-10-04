@@ -202,8 +202,22 @@ if (errors.length) {
 }
 
 
+// test 5
+const offset = Math.max(startArticleIndex, 0);
+const itemsToShow = items.slice(offset, totalNumberOfItems + offset);
+
+if (!itemsToShow.length) {
+  return null;
+}
+
+const totalItemsOfPage = rowGridCount * columnGridCount;
+const backgroundClasses = classNames(
+  'CategoryGrid-background',
+  { expandToEdges: expandBackground });
+
+
     return (
-      <div className="CategoryGrid">TEST4_2</div>
+      <div className="CategoryGrid">TEST5</div>
     );
   }
   render1() {
