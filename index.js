@@ -140,9 +140,49 @@ class CategoryGridWrapper extends Component {
 
         return errors;
       };
+    // start 3
+    let validationRules = {};
+      if (layout === layoutType.GRID) {
+        validationRules = {
+          rowGridCount: {
+            min: 1
+          },
+          columnGridCount: {
+            min: 1,
+            max: 6
+          },
+          heroCount: {},
+          columnGriffinCount: {}
+        };
+      } else if (layout === layoutType.HERO) {
+        validationRules = {
+          rowGridCount: {
+            min: 0
+          },
+          columnGridCount: {
+            min: 0,
+            max: heroPlacement === heroPlacementType.LEFT ? 3 : 6
+          },
+          heroCount: {
+            min: 1,
+            max: 3
+          },
+          columnGriffinCount: {}
+        };
+      } else if (layout === layoutType.GRIFFIN) {
+        validationRules = {
+          rowGridCount: {},
+          columnGridCount: {},
+          heroCount: {},
+          columnGriffinCount: {
+            min: 1,
+            max: 4
+          }
+        };
+      }
     
     return (
-      <div className="CategoryGrid">TEST2</div>
+      <div className="CategoryGrid">TEST3</div>
     );
   }
   render1() {
