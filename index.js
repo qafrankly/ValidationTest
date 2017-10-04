@@ -217,9 +217,10 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST6_1
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST6_2
         {title ?
           <Row>
+          <ComponentTitle color={titleColor} title={title} />
           </Row> : null}
           <CategoryGrid
             items={itemsToShow}
