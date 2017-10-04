@@ -2,11 +2,55 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import ComponentTitle from 'components/shared/ComponentTitle';
+// import ComponentTitle from 'components/shared/ComponentTitle';
 import ChevronRight from 'components/icons/ChevronRight';
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
 
+class ComponentTitle extends Component {
+  static propTypes = {
+    title: PropTypes.string,
+    color: PropTypes.string,
+    link: PropTypes.string,
+    linkIconColor: PropTypes.string,
+    showArrow: PropTypes.bool,
+    // TODO: Deprecate this property in future PR
+    classes: PropTypes.string,
+    target: PropTypes.string
+  }
+
+  static defaultProps = {
+    linkIconColor: 'rgba(175, 175, 175, 0.5)',
+    showArrow: true,
+    target: '_self'
+  }
+
+  render() {
+    const { title, color, link, linkIconColor, showArrow, classes, target } = this.props;
+    const className = classNames('ComponentTitle', classes);
+
+    if (!title) {
+      return null;
+    }
+
+    return (
+      <div className={className}>
+        {
+        link ?
+          <a href={link} target={target}>
+            <h2 className="ComponentTitle-title" style={{color}}>{title}</h2>
+            {showArrow && <div className="ComponentTitle-linkIconContainer">
+              <ChevronRight color={linkIconColor} />
+            </div>}
+          </a>
+          : <h2 className="ComponentTitle-title" style={{color}}>{title}</h2>
+        }
+      </div>
+    );
+  }
+
+}
+  
 const STORY = 'story';
 
 const GRID_ITEM_HEIGHT = 140;
@@ -217,9 +261,11 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST6_3
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST7
         {title ?
           <Row>
+
+          <ComponentTitle color={titleColor} title={title} />
 
           {showReadMore && categoryUrl ?
             <div className="CategoryGrid-readMore">
