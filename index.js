@@ -88,101 +88,105 @@ class CategoryGridWrapper extends Component {
     videoIconPlacement: 'center'
   }
   render() {
+
+
     const {
-        FRN_rawResponses: [{
-          data: {
-            features: items = [],
-            headline = ''
-          } = {}
-        } = {}] = [],
-        title,
-        layout,
-        titleColor,
-        backgroundColor,
-        textColor,
-        showReadMore,
-        showTimestamp,
-        showPill,
-        categoryUrl,
-        totalNumberOfItems,
-        startArticleIndex,
-        showPagination,
-        heroPlacement,
-        heroCount,
-        rowGridCount,
-        columnGridCount,
-        videoIconPlacement,
-        columnFirstGriffinCount,
-        columnSecondGriffinCount,
-        columnThirdGriffinCount,
-        timestampOptions = {},
-        titlePlacement = {},
-        expandBackground
-      } = this.props;
+      FRN_rawResponses: [{
+        data: {
+          features: items = [],
+          headline = ''
+        } = {}
+      } = {}] = [],
+      title,
+      layout,
+      titleColor,
+      backgroundColor,
+      textColor,
+      showReadMore,
+      showTimestamp,
+      showPill,
+      categoryUrl,
+      totalNumberOfItems,
+      startArticleIndex,
+      showPagination,
+      heroPlacement,
+      heroCount,
+      rowGridCount,
+      columnGridCount,
+      videoIconPlacement,
+      columnFirstGriffinCount,
+      columnSecondGriffinCount,
+      columnThirdGriffinCount,
+      timestampOptions = {},
+      titlePlacement = {},
+      expandBackground
+    } = this.props;
 
-    // start 2
     const maxValueViolation = (field, value) => {
-        return ` the ${field} field must be less than ${value}`;
-      };
-      const minValueViolation = (field, value) => {
-        return ` the ${field} field must be greater than ${value}`;
-      };
+      return ` the ${field} field must be less than ${value}`;
+    };
+    const minValueViolation = (field, value) => {
+      return ` the ${field} field must be greater than ${value}`;
+    };
 
-      const validate = (value, field, constraint) => {
-        const errors = [];
+    const validate = (value, field, constraint) => {
+      const errors = [];
 
-        if (constraint.min !== 'undefined' && value < constraint.min) {
-          errors.push(minValueViolation(field, constraint.min));
-        }
-        if (constraint.max !== 'undefined' && value > constraint.max) {
-          errors.push(maxValueViolation(field, constraint.max));
-        }
-
-        return errors;
-      };
-    // start 3
-    let validationRules = {};
-      if (layout === layoutType.GRID) {
-        validationRules = {
-          rowGridCount: {
-            min: 1
-          },
-          columnGridCount: {
-            min: 1,
-            max: 6
-          },
-          heroCount: {},
-          columnGriffinCount: {}
-        };
-      } else if (layout === layoutType.HERO) {
-        validationRules = {
-          rowGridCount: {
-            min: 0
-          },
-          columnGridCount: {
-            min: 0,
-            max: heroPlacement === heroPlacementType.LEFT ? 3 : 6
-          },
-          heroCount: {
-            min: 1,
-            max: 3
-          },
-          columnGriffinCount: {}
-        };
-      } else if (layout === layoutType.GRIFFIN) {
-        validationRules = {
-          rowGridCount: {},
-          columnGridCount: {},
-          heroCount: {},
-          columnGriffinCount: {
-            min: 1,
-            max: 4
-          }
-        };
+      if (constraint.min !== 'undefined' && value < constraint.min) {
+        errors.push(minValueViolation(field, constraint.min));
       }
+      if (constraint.max !== 'undefined' && value > constraint.max) {
+        errors.push(maxValueViolation(field, constraint.max));
+      }
+
+      return errors;
+    };
+
+    // test 3_1
+
+    let validationRules = {};
+    if (layout === layoutType.GRID) {
+      validationRules = {
+        rowGridCount: {
+          min: 1
+        },
+        columnGridCount: {
+          min: 1,
+          max: 6
+        },
+        heroCount: {},
+        columnGriffinCount: {}
+      };
+    } else if (layout === layoutType.HERO) {
+      validationRules = {
+        rowGridCount: {
+          min: 0
+        },
+        columnGridCount: {
+          min: 0,
+          max: heroPlacement === heroPlacementType.LEFT ? 3 : 6
+        },
+        heroCount: {
+          min: 1,
+          max: 3
+        },
+        columnGriffinCount: {}
+      };
+    } else if (layout === layoutType.GRIFFIN) {
+      validationRules = {
+        rowGridCount: {},
+        columnGridCount: {},
+        heroCount: {},
+        columnGriffinCount: {
+          min: 1,
+          max: 4
+        }
+      };
+    }
+
     
     return (
-      <div className="CategoryGrid">TEST3</div>
+      <div className="CategoryGrid">TEST3_1</div>
     );
   }
   render1() {
