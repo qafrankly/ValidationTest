@@ -217,9 +217,42 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid">TEST5</div>
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST6
+        {title ?
+          <Row>
+            <ComponentTitle color={titleColor} title={title} />
+            {showReadMore && categoryUrl ?
+              <div className="CategoryGrid-readMore">
+                <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
+              </div> : null}
+          </Row> : null}
+          <CategoryGrid
+            items={itemsToShow}
+            layout={layout}
+            showPagination={showPagination}
+            heroPlacement={heroPlacement}
+            heroCount={heroCount}
+            columnGridCount={columnGridCount}
+            rowGridCount={rowGridCount}
+            columnFirstGriffinCount={columnFirstGriffinCount}
+            columnSecondGriffinCount={columnSecondGriffinCount}
+            columnThirdGriffinCount={columnThirdGriffinCount}
+            titlePlacement={titlePlacement}
+            textColor={textColor}
+            titleColor={titleColor}
+            showTimestamp={showTimestamp}
+            showPill={showPill}
+            padding={Math.round(this.props.padding / 2)}
+            totalItemsOfPage={totalItemsOfPage}
+            videoIconPlacement={videoIconPlacement} 
+            timestampOptions={timestampOptions}/>
+
+          <span className={backgroundClasses} style={{backgroundColor}}></span>
+      </div>
     );
   }
+
+  
   render1() {
       const {
         FRN_rawResponses: [{
