@@ -87,8 +87,12 @@ class CategoryGridWrapper extends Component {
     expandBackground: false,
     videoIconPlacement: 'center'
   }
-
   render() {
+    return (
+      <div className="CategoryGrid">TEST</div>
+    );
+  }
+  render1() {
       const {
         FRN_rawResponses: [{
           data: {
