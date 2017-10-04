@@ -203,7 +203,7 @@ if (errors.length) {
 
 
     return (
-      <div className="CategoryGrid">TEST3_1</div>
+      <div className="CategoryGrid">TEST4</div>
     );
   }
   render1() {
