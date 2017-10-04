@@ -119,9 +119,30 @@ class CategoryGridWrapper extends Component {
         titlePlacement = {},
         expandBackground
       } = this.props;
+
+    // start 2
+    const maxValueViolation = (field, value) => {
+        return ` the ${field} field must be less than ${value}`;
+      };
+      const minValueViolation = (field, value) => {
+        return ` the ${field} field must be greater than ${value}`;
+      };
+
+      const validate = (value, field, constraint) => {
+        const errors = [];
+
+        if (constraint.min !== 'undefined' && value < constraint.min) {
+          errors.push(minValueViolation(field, constraint.min));
+        }
+        if (constraint.max !== 'undefined' && value > constraint.max) {
+          errors.push(maxValueViolation(field, constraint.max));
+        }
+
+        return errors;
+      };
     
     return (
-      <div className="CategoryGrid">TEST</div>
+      <div className="CategoryGrid">TEST2</div>
     );
   }
   render1() {
