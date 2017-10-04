@@ -7,7 +7,7 @@ import ChevronRight from 'components/icons/ChevronRight';
 
 console.log("TESTING CHEVRON RIGHT!!!");
 console.log(ChevronRight);
-console.log(ChevronRight());
+// console.log(ChevronRight());
 
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
