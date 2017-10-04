@@ -2,10 +2,10 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import { ComponentTitle } from 'components/shared/ComponentTitle';
-import { ChevronRight } from 'components/icons/ChevronRight';
-import { Pagination } from 'components/icons/Pagination';
-import { Timestamp } from 'components/custom/griffin/Timestamp';
+import ComponentTitle from 'components/shared/ComponentTitle';
+import ChevronRight from 'components/icons/ChevronRight';
+import Pagination from 'components/icons/Pagination';
+import Timestamp from 'components/custom/griffin/Timestamp';
 
 const STORY = 'story';
 
@@ -217,14 +217,9 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST6
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST6_1
         {title ?
           <Row>
-            <ComponentTitle color={titleColor} title={title} />
-            {showReadMore && categoryUrl ?
-              <div className="CategoryGrid-readMore">
-                <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
-              </div> : null}
           </Row> : null}
           <CategoryGrid
             items={itemsToShow}
