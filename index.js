@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
 // import ComponentTitle from 'components/shared/ComponentTitle';
-import ChevronRight from 'components/icons/ChevronRight';
+import ChevronRight from './ChevronRight';
 
 console.log("TESTING CHEVRON RIGHT!!!");
 console.log(ChevronRight);
@@ -266,7 +266,7 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST7_1
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST8
         {title ?
           <Row>
 
