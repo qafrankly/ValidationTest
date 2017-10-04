@@ -182,14 +182,14 @@ class CategoryGridWrapper extends Component {
       }
 
       const errors = [];
-      errors.push(...validate(columnGridCount, 'columnGridCount', validationRules.columnGridCount));
-      errors.push(...validate(rowGridCount, 'rowGridCount', validationRules.rowGridCount));
-      errors.push(...validate(heroCount, 'heroCount', validationRules.heroCount));
-      errors.push(...validate(columnFirstGriffinCount, 'columnFirstGriffinCount', validationRules.columnGriffinCount));
-      errors.push(...validate(columnSecondGriffinCount, 'columnSecondGriffinCount', validationRules.columnGriffinCount));
-      if (columnThirdGriffinCount > 0) {
-        errors.push(...validate(columnThirdGriffinCount, 'columnThirdGriffinCount', validationRules.columnGriffinCount));
-      }
+      //errors.push(...validate(columnGridCount, 'columnGridCount', validationRules.columnGridCount));
+      //errors.push(...validate(rowGridCount, 'rowGridCount', validationRules.rowGridCount));
+      //errors.push(...validate(heroCount, 'heroCount', validationRules.heroCount));
+      //errors.push(...validate(columnFirstGriffinCount, 'columnFirstGriffinCount', validationRules.columnGriffinCount));
+      //errors.push(...validate(columnSecondGriffinCount, 'columnSecondGriffinCount', validationRules.columnGriffinCount));
+      //if (columnThirdGriffinCount > 0) {
+      //  errors.push(...validate(columnThirdGriffinCount, 'columnThirdGriffinCount', validationRules.columnGriffinCount));
+      //}
 
       if (errors.length) {
         errors.unshift(`When layout is ${layout}${layout === layoutType.HERO ? ` and heroPlacement is ${heroPlacement}` : ''}`);
