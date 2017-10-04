@@ -88,6 +88,38 @@ class CategoryGridWrapper extends Component {
     videoIconPlacement: 'center'
   }
   render() {
+    const {
+        FRN_rawResponses: [{
+          data: {
+            features: items = [],
+            headline = ''
+          } = {}
+        } = {}] = [],
+        title,
+        layout,
+        titleColor,
+        backgroundColor,
+        textColor,
+        showReadMore,
+        showTimestamp,
+        showPill,
+        categoryUrl,
+        totalNumberOfItems,
+        startArticleIndex,
+        showPagination,
+        heroPlacement,
+        heroCount,
+        rowGridCount,
+        columnGridCount,
+        videoIconPlacement,
+        columnFirstGriffinCount,
+        columnSecondGriffinCount,
+        columnThirdGriffinCount,
+        timestampOptions = {},
+        titlePlacement = {},
+        expandBackground
+      } = this.props;
+    
     return (
       <div className="CategoryGrid">TEST</div>
     );
