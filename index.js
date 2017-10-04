@@ -7,6 +7,7 @@ import ChevronRight from 'components/icons/ChevronRight';
 
 console.log("TESTING CHEVRON RIGHT!!!");
 console.log(ChevronRight);
+console.log(ChevronRight());
 
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
@@ -54,7 +55,7 @@ class ComponentTitle extends Component {
   }
 
 }
-  
+
 const STORY = 'story';
 
 const GRID_ITEM_HEIGHT = 140;
@@ -129,7 +130,7 @@ class CategoryGridWrapper extends Component {
     textColor: '#FFFFFF',
     titleColor: '#313131',
     showPagination: false,
-    showTimestamp: true, 
+    showTimestamp: true,
     showReadMore: false,
     padding: 2,
     expandBackground: false,
@@ -272,12 +273,12 @@ const backgroundClasses = classNames(
           <ComponentTitle color={titleColor} title={title} />
 
           <ChevronRight color="#003300" />
-          
+
           {showReadMore && categoryUrl ?
             <div className="CategoryGrid-readMore">
               <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
             </div> : null}
-            
+
           </Row> : null}
           <CategoryGrid
             items={itemsToShow}
@@ -297,7 +298,7 @@ const backgroundClasses = classNames(
             showPill={showPill}
             padding={Math.round(this.props.padding / 2)}
             totalItemsOfPage={totalItemsOfPage}
-            videoIconPlacement={videoIconPlacement} 
+            videoIconPlacement={videoIconPlacement}
             timestampOptions={timestampOptions}/>
 
           <span className={backgroundClasses} style={{backgroundColor}}></span>
@@ -305,7 +306,7 @@ const backgroundClasses = classNames(
     );
   }
 
-  
+
   render1() {
       const {
         FRN_rawResponses: [{
@@ -454,7 +455,7 @@ const backgroundClasses = classNames(
             showPill={showPill}
             padding={Math.round(this.props.padding / 2)}
             totalItemsOfPage={totalItemsOfPage}
-            videoIconPlacement={videoIconPlacement} 
+            videoIconPlacement={videoIconPlacement}
             timestampOptions={timestampOptions}/>
 
           <span className={backgroundClasses} style={{backgroundColor}}></span>
@@ -655,11 +656,11 @@ class CategoryGrid extends Component {
             <div className="CategoryGrid-pagination">
               <ul className="CategoryGrid-pagination-dots">
                 { totalPage.map((index) => {
-                    const className = index === page ? 'CategoryGrid-pagination-dots-active' : null; 
+                    const className = index === page ? 'CategoryGrid-pagination-dots-active' : null;
                     const dotsStyle = {
                       borderColor: titleColor
                     };
-                    
+
                     if (index === page) {
                       dotsStyle.backgroundColor = titleColor;
                     }
@@ -796,14 +797,14 @@ class Item extends Component {
         <div className={imageThumbnailClassName} style={wrapperStyles}>
           <div className="CategoryGrid-pictureText">
             {showPill ? <span className="CategoryGrid-categoryHeader">{pillLabel}</span> : null}
-            {titlePlacement === titlePlacementType.INNER ? 
+            {titlePlacement === titlePlacementType.INNER ?
               <p className={headlineSmallClassName} style={{color: textColor}}>{headline}</p> : null
             }
             {/* Pending Updated and Published timestamps from ticket WEB-566 */}
             {showTimestamp && titlePlacement === titlePlacementType.INNER ? <Timestamp publishDate={publishedDate} showElapsedTime={showElapsedTime} displayShortDateTime={displayShortDateTime}/> : null}
           </div>
         </div>
-        {titlePlacement === titlePlacementType.OUTER ? 
+        {titlePlacement === titlePlacementType.OUTER ?
             <p className={headlineSmallClassName} style={{color: titleColor}}>{headline}</p> : null
         }
       </Col>
