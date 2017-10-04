@@ -261,12 +261,14 @@ const backgroundClasses = classNames(
 
 
     return (
-      <div className="CategoryGrid" style={{backgroundColor}}> TEST7
+      <div className="CategoryGrid" style={{backgroundColor}}> TEST7_1
         {title ?
           <Row>
 
           <ComponentTitle color={titleColor} title={title} />
 
+          <ChevronRight color="#003300" />
+          
           {showReadMore && categoryUrl ?
             <div className="CategoryGrid-readMore">
               <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
