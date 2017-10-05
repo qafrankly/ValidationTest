@@ -5,7 +5,21 @@
   "affiliates":["wasdftv", "kotv"],
   "propTypes": {
     "title": "PropTypes.string",
-    "layout": "PropTypes.string"
+    "layout": "PropTypes.string",
+                           "titleColor": "PropTypes.string",
+                           "backgroundColor": "PropTypes.string",
+                           "showReadMore": "PropTypes.string",
+                           "showPagination": "PropTypes.string",
+                           "totalNumberOfItems": "PropTypes.string",
+                           "textColor": "PropTypes.string",
+                           "showTimestamp": "PropTypes.string",
+                           "padding": "PropTypes.string",
+                           "showPill": "PropTypes.string",
+                           "timestampOptions": "PropTypes.string",
+                           "columnFirstGriffinCount": "PropTypes.string",
+                           "columnSecondGriffinCount": "PropTypes.string",
+                           "columnThirdGriffinCount": "PropTypes.string",
+                           "titlePlacement": "PropTypes.string"
   },
   "defaultProps": {
                            "title": "",
