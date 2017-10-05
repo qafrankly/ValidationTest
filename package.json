@@ -31,7 +31,8 @@
                                "secondRow": "outer",
                                "thirdRow": "outer",
                                "endpoints_type": "json"
-                           },
+                           }
+  },
   "propChoices": {
     "layout": [
       "griffin",
