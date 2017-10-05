@@ -22,7 +22,7 @@
                            "titlePlacement": "PropTypes.object"
   },
   "defaultProps": {
-                           "title": "",
+                           "title": "Title",
                            "titleColor": "#000000",
                            "backgroundColor": "#ffffff",
                            "layout": "griffin",
