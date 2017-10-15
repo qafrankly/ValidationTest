@@ -214,12 +214,12 @@ class CategoryGridWrapper extends Component {
         {title ?
           <Row>
       {/*
-            <ComponentTitle color={titleColor} title={title} /> 
+              <ComponentTitle color={titleColor} title={title} /> 
       */}
             {showReadMore && categoryUrl ?
-              <div className="CategoryGrid-readMore">
+              <div className="CategoryGrid-readMore">..
                 <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
-              </div> : null}
+              ..</div> : null}
           </Row> : null}
           <CategoryGrid
             items={itemsToShow}
