@@ -2,7 +2,7 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
-import ComponentTitle from 'components/custom/griffin/ComponentTitle';
+// import ComponentTitle from 'components/custom/griffin/ComponentTitle';
 import ChevronRight from 'components/icons/ChevronRight';
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
