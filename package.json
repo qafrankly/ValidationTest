@@ -6,6 +6,7 @@
     "kotv"
   ],
   "propTypes": {
+    "FRN_rawResponses": "PropTypes.array",
     "title": "PropTypes.string",
     "titleColor": "PropTypes.string",
     "backgroundColor": "PropTypes.string",
