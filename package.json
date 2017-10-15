@@ -33,7 +33,7 @@
     "expandBackground": "PropTypes.bool"
   },
   "defaultProps": {
-    "title": "",
+    "title": "Title",
     "layout": "grid",
     "startArticleIndex": 0,
     "totalNumberOfItems": 7,
