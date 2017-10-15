@@ -2,7 +2,7 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import React, { Component, PropTypes } from 'react';
 import { Row, Col } from 'react-bootstrap';
-// import ComponentTitle from 'components/custom/griffin/ComponentTitle';
+import ComponentTitle from 'components/shared/ComponentTitle';
 import ChevronRight from 'components/icons/ChevronRight';
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
@@ -213,9 +213,9 @@ class CategoryGridWrapper extends Component {
       <div className="CategoryGrid" style={{backgroundColor}}>
         {title ?
           <Row>
-      {/*
+      
               <ComponentTitle color={titleColor} title={title} /> 
-      */}
+      
             {showReadMore && categoryUrl ?
               <div className="CategoryGrid-readMore">
                 <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
