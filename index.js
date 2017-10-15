@@ -213,9 +213,7 @@ class CategoryGridWrapper extends Component {
       <div className="CategoryGrid" style={{backgroundColor}}>
         {title ?
           <Row>
-              TEST
               <ComponentTitle color={titleColor} title={title} /> 
-              TEST
             {showReadMore && categoryUrl ?
               <div className="CategoryGrid-readMore">
                 <a href={categoryUrl}> <ChevronRight color="#CCC" /> </a>
