@@ -5,7 +5,7 @@ import { Row, Col } from 'react-bootstrap';
 // import ComponentTitle from 'components/custom/griffin/ComponentTitle';
 import ChevronRight from 'components/icons/ChevronRight';
 import Pagination from 'components/icons/Pagination';
-import Timestamp from 'components/custom/griffin/Timestamp';
+// import Timestamp from 'components/custom/griffin/Timestamp';
 
 const STORY = 'story';
 
@@ -583,7 +583,9 @@ class Item extends Component {
               <p className={headlineSmallClassName} style={{color: textColor}}>{headline}</p> : null
             }
             {/* Pending Updated and Published timestamps from ticket WEB-566 */}
-            {showTimestamp && titlePlacement === titlePlacementType.INNER ? <Timestamp publishDate={publishedDate} showElapsedTime={showElapsedTime} displayShortDateTime={displayShortDateTime}/> : null}
+{/* 
+{showTimestamp && titlePlacement === titlePlacementType.INNER ? <Timestamp publishDate={publishedDate} showElapsedTime={showElapsedTime} displayShortDateTime={displayShortDateTime}/> : null}
+*/}
           </div>
         </div>
         {titlePlacement === titlePlacementType.OUTER ?
