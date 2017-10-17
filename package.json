@@ -3,7 +3,7 @@
   "tag": "griffin",
   "affiliates": [
     "wasdftv",
-    "wnow"
+    "kotv"
   ],
   "propTypes": {
     "FRN_rawResponses": "PropTypes.array",
