@@ -2,8 +2,8 @@
   "thumbnail": "https://wnow-modules.s3.amazonaws.com/icon_stroke_news_articlelist.svg",
   "tag": "griffin",
   "affiliates": [
-    "asdfd",
-    "kotv1"
+    "asdfds",
+    "ksotv1"
   ],
   "propTypes": {
     "FRN_rawResponses": "PropTypes.array",
