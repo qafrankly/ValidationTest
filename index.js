@@ -7,6 +7,8 @@ import ChevronRight from 'components/icons/ChevronRight';
 import Pagination from 'components/icons/Pagination';
 import Timestamp from 'components/custom/griffin/Timestamp';
 
+const MATT = 'matt';
+
 const STORY = 'story';
 
 const GRID_ITEM_HEIGHT = 140;
